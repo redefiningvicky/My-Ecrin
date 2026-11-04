@@ -4,7 +4,7 @@ This project is a personal digital jewelry box where treasured pieces can be bea
 ## 🛠️ Tools <br>
 Replit, ChatGPT, Vercel <p>
 ## 📱 App <br>
-<img src="https://github.com/redefiningvicky/My-Ecrin/blob/e4d2e1f26e1d98c500bb43da02fba89f62ed9909/myecrin-four-screen-showcase-tight-browser.png" width="900" />
+<img src="https://github.com/redefiningvicky/My-Ecrin/blob/6cb94cb794b1d02658bd4cfcbb57675585654f0d/myecrin-four-screen-showcase-tight-browser.png" width="900" />
 
 <a href="https://redefiningvicky.github.io/My-Ecrin/">
   <img src="https://redefiningvicky.github.io/My-Ecrin/hqdefault.jpg" width="65%" alt="Watch Project Video">
