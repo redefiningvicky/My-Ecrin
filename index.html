@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5eee1">
+    <meta name="description" content="A short My Écrin walkthrough.">
+    <title>My Écrin — Your personal jewelry box</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f5eee1;
+        --ink: #332720;
+        --muted: #74675d;
+        --gold: #98712f;
+        --line: #d9c9a9;
+        --velvet: #28171b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .page {
+        width: min(100% - 36px, 1080px);
+        margin: 0 auto;
+        padding: clamp(28px, 6vw, 64px) 0 36px;
+        text-align: center;
+      }
+
+      .wordmark {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+      }
+
+      .rule {
+        width: 56px;
+        height: 1px;
+        margin: 18px auto 28px;
+        border: 0;
+        background: var(--gold);
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--gold);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 400;
+        line-height: 1.12;
+        text-wrap: balance;
+      }
+
+      .intro {
+        margin: 14px auto 28px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.6;
+      }
+
+      figure {
+        margin: 0 auto;
+      }
+
+      .video-frame {
+        width: min(100%, 400px);
+        aspect-ratio: 9 / 16;
+        margin: 0 auto;
+        padding: 6px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--velvet);
+        box-shadow: 0 14px 34px rgb(55 38 23 / 12%);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+        background: var(--velvet);
+        object-fit: contain;
+      }
+
+      figcaption {
+        max-width: 36rem;
+        margin: 12px auto 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+
+      .download {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        margin: 22px auto 0;
+        padding: 0 22px;
+        border: 1px solid var(--gold);
+        border-radius: 999px;
+        background: var(--gold);
+        color: #fffaf0;
+        font-size: 0.95rem;
+        font-weight: 650;
+        text-decoration: none;
+        transition: background-color 140ms ease, color 140ms ease;
+      }
+
+      .download:hover {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .download:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 4px;
+      }
+
+      footer {
+        margin-top: 42px;
+        color: var(--muted);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        .page {
+          width: min(100% - 28px, 400px);
+          padding-top: 26px;
+        }
+
+        .rule {
+          margin-bottom: 24px;
+        }
+
+        .intro {
+          margin-bottom: 22px;
+        }
+
+        .video-frame {
+          width: min(100%, 360px);
+          border-radius: 20px;
+        }
+
+        video {
+          border-radius: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <p class="wordmark">My Écrin</p>
+        <hr class="rule">
+        <p class="eyebrow">Walkthrough</p>
+        <h1>Your personal jewelry box.</h1>
+        <p class="intro">Rediscover your pieces. Create looks you love.</p>
+      </header>
+
+      <main>
+        <figure>
+          <div class="video-frame">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="My Écrin walkthrough video"
+              aria-describedby="capture-note"
+            >
+              <source src="myecrin-walkthrough-tight-15s.mp4" type="video/mp4">
+              <p>
+                Video playback is not supported in this browser.
+                <a href="myecrin-walkthrough-tight-15s.mp4">Open the MP4 file</a>.
+              </p>
+            </video>
+          </div>
+          <figcaption id="capture-note">
+            Browser-captured footage; this is not a native iOS recording.
+          </figcaption>
+        </figure>
+
+        <a
+          class="download"
+          href="myecrin-walkthrough-tight-15s.mp4"
+          download="myecrin-walkthrough-tight-15s.mp4"
+        >
+          Download the 14.2-second walkthrough
+        </a>
+      </main>
+
+      <footer>My Écrin</footer>
+    </div>
+  </body>
+</html>
