@@ -1,6 +1,6 @@
 # 💍 My Ecrin
 ## 🎯 Objective <br>
-
+This project is a personal digital jewelry box where treasured pieces can be beautifully organized, rediscovered, and styled into everyday combinations. Bringing together Replit, ChatGPT, and Vercel, it blends practical collection management with the intimate, elegant feel of opening a keepsake box.
 ## 🛠️ Tools <br>
 Replit, ChatGPT, Vercel <p>
 ## 📱 App <br>
