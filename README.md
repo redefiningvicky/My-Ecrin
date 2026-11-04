@@ -1,4 +1,4 @@
-# 💍 My-Ecrin
+# 💍 My Ecrin
 ## 🎯 Objective <br>
 
 ## 🛠️ Tools <br>
