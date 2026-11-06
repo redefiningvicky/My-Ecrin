@@ -4,7 +4,7 @@ This project is a personal digital jewelry box where treasured pieces can be bea
 ## 🛠️ Tools <br>
 Replit, ChatGPT, Vercel <p>
 ## ⚙️ Model <br>
-Replit Free, Replit Power, ChatGPT 6.1 Sol <p>
+Replit Free, Replit Power, ChatGPT 6.1 Sol (2026) <p>
 ## 📱 App <br>
 This project is a fully functional app available at the following link: [Launch App](https://my-ecrin.vercel.app/) <p>
 <img src="https://github.com/redefiningvicky/My-Ecrin/blob/18edb097a88874baae325168b8f972c35f3b6b64/myecrin-promo/myecrin-four-screen-showcase-phones.png" width="900" />
