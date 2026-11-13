@@ -30,7 +30,7 @@
   This project is a personal digital jewelry box where
   treasured pieces can be beautifully organized,
   rediscovered, and styled into everyday combinations.
-  Bringing together Replit, ChatGPT, and Vercel,
+  Bringing together Replit, ChatGPT, Vercel, and Github
   it blends practical collection management with the
   intimate, elegant feel of opening a keepsake box.
 </p>
@@ -40,7 +40,7 @@
 <h2 id="project-details">🛠️ Project Details</h2>
 
 <p>
-  <strong>Tools:</strong> Replit, ChatGPT, Vercel
+  <strong>Tools:</strong> Replit, ChatGPT, Vercel, Github
 </p>
 
 <p>
