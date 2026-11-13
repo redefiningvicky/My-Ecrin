@@ -221,6 +221,9 @@
         }
       }
       .player-controls { width:min(100%,370px); margin:18px auto 0; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; }
+      .player-controls output { order:3; width:100%; }
+      .player-controls input { order:4; }
+      #fullscreen-toggle { min-width:112px; }
       .player-controls[hidden] { display:none; }
       .player-controls button { min-height:44px; padding:0 16px; border:1px solid var(--gold); border-radius:24px; background:transparent; color:var(--ink); font:inherit; cursor:pointer; }
       #play-toggle { background:var(--gold); color:#fffaf0; min-width:112px; }
@@ -247,6 +250,7 @@
             <span class="phone-buttons" aria-hidden="true"></span>
             <video
               controls
+              muted
               playsinline
               preload="metadata"
               poster="myecrin-promo/video-poster.jpg"
@@ -262,7 +266,6 @@
           <div class="player-controls" hidden role="group" aria-label="Video playback controls">
             <button id="play-toggle" type="button" aria-label="Play walkthrough">▶ Play</button>
             <output id="playback-time" aria-label="Playback time">0:00 / 0:15</output>
-            <button id="mute-toggle" type="button" aria-label="Mute audio">Mute</button>
             <button id="fullscreen-toggle" type="button" aria-label="Show video fullscreen">Full screen</button>
             <input id="video-progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Seek video" aria-valuetext="0:00">
           </div>
@@ -281,7 +284,6 @@
       const video = document.querySelector('video');
       const controls = document.querySelector('.player-controls');
       const play = document.getElementById('play-toggle');
-      const mute = document.getElementById('mute-toggle');
       const progress = document.getElementById('video-progress');
       const time = document.getElementById('playback-time');
       const format = value => Math.floor(value / 60) + ':' + String(Math.floor(value % 60)).padStart(2, '0');
@@ -292,19 +294,18 @@
         time.textContent = format(video.currentTime) + ' / ' + format(duration);
         play.textContent = video.ended ? '↻ Replay' : video.paused ? '▶ Play' : 'Ⅱ Pause';
         play.setAttribute('aria-label', video.ended ? 'Replay walkthrough' : video.paused ? 'Play walkthrough' : 'Pause walkthrough');
-        mute.textContent = video.muted ? 'Unmute' : 'Mute';
-        mute.setAttribute('aria-label', video.muted ? 'Unmute audio' : 'Mute audio');
       };
       play.addEventListener('click', async () => {
         if (video.paused) { if (video.ended) video.currentTime = 0; try { await video.play(); } catch { video.controls = true; } }
         else video.pause();
       });
-      mute.addEventListener('click', () => { video.muted = !video.muted; sync(); });
       progress.addEventListener('input', () => { if (Number.isFinite(video.duration)) video.currentTime = Number(progress.value) / 100 * video.duration; });
       document.getElementById('fullscreen-toggle').addEventListener('click', async () => {
         try { if (video.requestFullscreen) await video.requestFullscreen(); else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen(); } catch {}
       });
       ['loadedmetadata', 'timeupdate', 'play', 'pause', 'ended', 'volumechange'].forEach(event => video.addEventListener(event, sync));
+      video.muted = true;
+      video.defaultMuted = true;
       video.controls = false;
       controls.hidden = false;
       sync();
