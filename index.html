@@ -140,9 +140,44 @@
 
       footer {
         margin-top: 42px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
         color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .footer-brand {
+        margin: 0 0 10px;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px 24px;
+      }
+
+      .footer-links a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        color: var(--ink);
+        text-underline-offset: 4px;
+        text-decoration-thickness: 1px;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+      }
+
+      .footer-links a:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 4px;
+        border-radius: 2px;
       }
 
       @media (max-width: 480px) {
@@ -198,6 +233,14 @@
           </div>
         </figure>
       </main>
+
+      <footer>
+        <p class="footer-brand">My Écrin — Your personal jewelry box.</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://my-ecrin.vercel.app/">Launch My Écrin <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/redefiningvicky/My-Ecrin">View the project on GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
