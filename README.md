@@ -48,6 +48,10 @@
   ChatGPT 6.1 Sol (2026)
 </p>
 
+<p>
+  <strong>Format:</strong> Mobile App
+</p>
+
 <hr>
 
 <h2 id="app">📱 App</h2>
