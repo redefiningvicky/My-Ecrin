@@ -232,6 +232,8 @@
       .player-controls :focus-visible { outline:3px solid var(--ink); outline-offset:3px; }
       .phone-screen {
         position: relative;
+        /* Focus on the app: omit the recorded title and caption bands. */
+        aspect-ratio: 816 / 1714;
         overflow: hidden;
         border-radius: 18px;
         isolation: isolate;
@@ -239,10 +241,22 @@
         box-shadow: 0 0 0 1px #8b7a53;
       }
       .phone-screen video {
-        border-radius: 18px;
+        position: absolute;
+        width: 132.352941%;
+        height: 112.01867%;
+        left: -16.176471%;
+        top: -4.784131%;
+        object-fit: fill;
+        border-radius: 0;
         outline: none;
-        clip-path: inset(0 round 18px);
       }
+      .phone-screen:fullscreen {
+        width: auto;
+        height: 100%;
+        margin: auto;
+        border-radius: 0;
+      }
+      .phone-screen::backdrop { background: #000; }
       .phone-screen::after {
         content: "";
         position: absolute;
@@ -300,6 +314,7 @@
         <nav class="footer-links" aria-label="Footer">
           <a href="https://my-ecrin.vercel.app/">Launch My Écrin <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/redefiningvicky/My-Ecrin">View the project on GitHub <span aria-hidden="true">↗</span></a>
+          <a href="myecrin-promo/myecrin-walkthrough-original-uncropped.mp4" download>Download original video</a>
         </nav>
       </footer>
     </div>
@@ -324,7 +339,8 @@
       });
       progress.addEventListener('input', () => { if (Number.isFinite(video.duration)) video.currentTime = Number(progress.value) / 100 * video.duration; });
       document.getElementById('fullscreen-toggle').addEventListener('click', async () => {
-        try { if (video.requestFullscreen) await video.requestFullscreen(); else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen(); } catch {}
+        const screen = document.querySelector('.phone-screen');
+        try { if (screen.requestFullscreen) await screen.requestFullscreen(); else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen(); } catch {}
       });
       ['loadedmetadata', 'timeupdate', 'play', 'pause', 'ended', 'volumechange'].forEach(event => video.addEventListener(event, sync));
       video.muted = true;
