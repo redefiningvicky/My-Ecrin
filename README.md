@@ -44,7 +44,11 @@
 </p>
 
 <p>
-  <strong>Workflow:</strong> ChatGPT → Replit → ChatGPT → Github
+  <strong>App Workflow:</strong> ChatGPT → Replit → ChatGPT → Vercel
+</p>
+
+<p>
+  <strong>Video Workflow:</strong> ChatGPT → Replit → ChatGPT → Github
 </p>
 
 <p>
