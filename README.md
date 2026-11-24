@@ -52,7 +52,7 @@
 </p>
 
 <p>
-  <strong>Model:</strong> Replit Free, Replit Power,
+  <strong>Models:</strong> Replit Free, Replit Power,
   ChatGPT 6.1 Sol (2026), ChatGPT 6 Astra (2026)
 </p>
 
